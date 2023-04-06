@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+</head>
+<script>
+  var pages = {
+    'Home':`Welcome to "Intro to Biology"!<br/><br/><img src='dna.jpg' style='width:100%;' />`,
+    'Calendar' : `This is the Calendar for the course <br/><br/><iframe type="html" src="calendar index.html" width="100%" height="560" ></iframe>`,
+    'ToDoList' : `This is the To Do List for Today <br/><br/><iframe type="html" src="index.html" width="100%" height="560"></iframe>`,
+    'FlashCards' : `This is where you can study Flash Cards before taking Quiz #1<br/><br/><iframe type="html" src="Flash Card index.html" width="100%" height="560"></iframe>`,
+    'Quiz' : `This is the location for taking quizzes <br/><br/><iframe type="html" src="quiz.html" width="100%" height="560"></iframe>`
+  };
+
+  function getPageContent(page) {
+    var contentToReturn;
+
+    switch(page) {
+
+      case 'Home':
+        contentToReturn = pages.Home;
+        break;
+      case 'Calendar':
+        contentToReturn = pages.Calendar;
+        break;
+      case 'ToDoList':
+        contentToReturn = pages.ToDoList;
+        break;
+      case 'FlashCards':
+        contentToReturn = pages.FlashCards;
+        break;
+      case 'Quiz':
+        contentToReturn = pages.Quiz;
+        break;
+      default:
+      contentToReturn = pages.Home;
+        break;
+    }
+    document.getElementById('content').innerHTML = contentToReturn;
+  }
+</script>
+<body onload="getPageContent('Home')">
+
+  <div style = "width: 20%; float: left; background: #c5c5c5; height: 790px;">
+    <ul style="list-style-type:none;">
+      <li style ="line-height: 50px; font-size:x-large">
+        <a href="#" onclick="getPageContent('Home')">Home
+        </a>
+      </li>
+      <li style ="line-height: 50px; font-size:x-large">
+        <a href="#" onclick="getPageContent('Calendar')">Calendar
+        </a>
+      </li>
+      <li style ="line-height: 50px; font-size:x-large">
+        <a href="#" onclick="getPageContent('ToDoList')">To Do List
+        </a>
+      </li>
+      <li style ="line-height: 50px; font-size:x-large">
+        <a href="#" onclick="getPageContent('FlashCards')">Flash Cards
+        </a>
+      </li>
+      <li style ="line-height: 50px; font-size:x-large">
+        <a href="#" onclick="getPageContent('Quiz')">Quiz
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div style="width:80%; float:right; background:#DAF7A6 ; color:#000; height: 80%;; font-size: 50px;">
+    <p style="margin-left: 100px; margin-right: 100px;"id="content">
+    </p>
+  </div>
+</body>
+</html>
