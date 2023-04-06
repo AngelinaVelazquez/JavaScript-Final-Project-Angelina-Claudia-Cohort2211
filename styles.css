@@ -1,0 +1,137 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple : #9747ff;
+  --grey : #bfc1ed;
+  --charcoal : #322f2f;
+  --gold : #e9c14a;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Inter',san-serif;
+}
+
+.container {
+  max-width: 80%;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.heading h1 {
+  color: var(--charcoal);
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+#date {
+  color: var(--gold);
+  padding: 50px 0 5px 0;
+}
+
+/* Assignments */
+.assignments-list li {
+  display: flex;
+  border-radius: 15px;
+  padding: 10px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p {
+  margin-left: 25px;
+  margin-top: 10px;
+  cursor: default;
+}
+
+#second {
+  margin-top: 2.5px;
+}
+
+.box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide checkbox */
+.box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 45px;
+  background-color: var(--charcoal);
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 1px #9747ff;
+}
+
+/* On hover, add a purple background color */
+.checkmark:hover {
+  background: linear-gradient(to bottom,var(--purple),var(--grey));
+}
+
+/* Checked checkbox, add a charcoal background */
+input:checked ~ .checkmark {
+  background-color: var(--charcoal);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show checkmark when checked */
+input:checked ~ .checkmark:after {
+  display: block;
+} 
+
+/* Style checkmark */
+.checkmark:after {
+  left: 15px;
+  top: 5px;
+  width: 10px;
+  height: 30px;
+  border: solid var(--grey);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.task-box {
+  width: 25px;
+  height: 25px;
+}
+
+.assignments-list > ul p {
+  font-size: 1.2rem;
+}
+
+.strike-through {
+text-decoration: line-through;
+}

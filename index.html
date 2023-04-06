@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Assignments</title>
+  <!--Google Font Link for Inter-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+  <main class="web">
+    <div class="container">
+      <!--Heading-->
+      <div class="heading">
+        
+        <div id="date"></div>
+      
+        <h1 class="title">
+        Today's Assignments
+        </h1>
+
+      </div>
+     
+      <!--Assignments-->
+
+      <div class="assignments-list" id="listimage">
+        <ul id="list">
+          <li id="element">
+            <label class="box">
+              <input type="checkbox" class="task-box" id="tickMark1">
+              <p class="text" id="first">Study flashcards for Quiz #1</p>
+            <span class="checkmark"></span>
+            </label>
+          </li>
+
+          <li>
+            <label class="box">
+            <input type="checkbox" class="task-box" id="tickMark2">
+            <p class="text" id="second">Homework #1 due Today (Turn in by 11:59PM)</p>
+            <span class="checkmark"></span>
+          </label>
+          </li>
+          <li>
+            <label class="box boxthree">
+            <input type="checkbox" class="task-box" id="tickMark3">
+            <p class="text" id="third">Read Chapter 2</p>
+            <span class="checkmark"></span>
+          </label>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
