@@ -1,0 +1,98 @@
+/* Import Google font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Moon+Dance&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box ;
+  font-family: 'Inter', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:#d1b6f5;
+}
+.wrapper{ 
+  width: 450px;
+  background: #000000;
+  border-radius: 10px; 
+;}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  color: #ffffff;
+  font-size: 1.9rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  background: #ac79ed;
+}
+header .icons span:hover{
+  background: #ac79ed;
+}
+header .icons span:last-child{
+  margin-right: -10px;
+}
+div {
+  color:#ffffff;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar .weeks li{
+  font-weight: 500;
+}
+.calendar ul li{
+  position: relative;
+  width: calc(100% / 7);
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color:#897c9b;
+}
+.days li.active{
+  color:#e9c14a;
+}
+.calendar .days li::before{
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 25%;
+  transform: translate(-50%, -50%);
+}
+.days li:hover::before{
+  background:#ac79ed;
+}
+.days li.active::before{
+  background: #9747FF; 
+}
