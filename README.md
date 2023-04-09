@@ -3,7 +3,7 @@
 ## Description
 
 We wanted to create an interactive classroom. 
-That contained a calendar, a to do list, and
+That contained a calendar, a to do list, a quiz and
 flashcards all in one location.
 
 ## Credits
